@@ -1,0 +1,23 @@
+{
+  "name": "media-layer",
+  "version": "0.1.0",
+  "description": "",
+  "sideEffects": false,
+  "scripts": {
+    "start": "zem start",
+    "build": "zem build",
+    "clean": "zem clean",
+    "exec": "zem exec",
+    "test": "zem test",
+    "publish": "zem publish"
+  },
+  "zeplin": {
+    "displayName": "Media Layer",
+    "platforms": [
+      "web"
+    ]
+  },
+  "dependencies": {
+    "zem": "^1.2.0"
+  }
+}

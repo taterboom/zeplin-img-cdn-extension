@@ -1,0 +1,11 @@
+{
+  "packageName": "media-layer",
+  "name": "Media Layer",
+  "description": "",
+  "version": "0.1.0",
+  "platforms": [
+    "web"
+  ],
+  "moduleURL": "./main.f5522620.js",
+  "readmeURL": "./README.md"
+}
