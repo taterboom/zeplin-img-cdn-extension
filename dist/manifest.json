@@ -1,11 +1,11 @@
 {
-  "packageName": "media-layer",
-  "name": "Media Layer",
+  "packageName": "img-url-3x",
+  "name": "Media Url",
   "description": "",
   "version": "0.1.0",
   "platforms": [
     "web"
   ],
-  "moduleURL": "./main.f5522620.js",
+  "moduleURL": "./main.21547f7f.js",
   "readmeURL": "./README.md"
 }

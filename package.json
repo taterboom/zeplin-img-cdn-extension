@@ -1,5 +1,5 @@
 {
-  "name": "media-layer",
+  "name": "img-url-3x",
   "version": "0.1.0",
   "description": "",
   "sideEffects": false,
@@ -12,7 +12,7 @@
     "publish": "zem publish"
   },
   "zeplin": {
-    "displayName": "Media Layer",
+    "displayName": "Media Url",
     "platforms": [
       "web"
     ]

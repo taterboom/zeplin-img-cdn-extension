@@ -1,2 +1,3 @@
-## media layer
-zeplin => develop => extensions => manage extensions => press options => add local extension => manifest.json
+## media url
+
+> display img url for copy
