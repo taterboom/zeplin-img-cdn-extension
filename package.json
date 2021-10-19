@@ -1,6 +1,6 @@
 {
-  "name": "img-url-3x",
-  "version": "0.1.0",
+  "name": "img-url",
+  "version": "0.2.0",
   "description": "",
   "sideEffects": false,
   "scripts": {
@@ -12,7 +12,7 @@
     "publish": "zem publish"
   },
   "zeplin": {
-    "displayName": "Media Url",
+    "displayName": "Img Url",
     "platforms": [
       "web"
     ],
@@ -37,19 +37,19 @@
         "id": "scale",
         "name": "@x",
         "type": "picker",
-        "default": 3,
+        "default": "3",
         "options": [
           {
             "name": "3x",
-            "value": 3
+            "value": "3"
           },
           {
             "name": "2x",
-            "value": 2
+            "value": "2"
           },
           {
             "name": "1x",
-            "value": 1
+            "value": "1"
           }
         ]
       }

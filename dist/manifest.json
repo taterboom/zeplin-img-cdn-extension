@@ -1,8 +1,8 @@
 {
-  "packageName": "img-url-3x",
-  "name": "Media Url",
+  "packageName": "img-url",
+  "name": "Img Url",
   "description": "",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "options": [
     {
       "id": "ext",
@@ -24,19 +24,19 @@
       "id": "scale",
       "name": "@x",
       "type": "picker",
-      "default": 3,
+      "default": "3",
       "options": [
         {
           "name": "3x",
-          "value": 3
+          "value": "3"
         },
         {
           "name": "2x",
-          "value": 2
+          "value": "2"
         },
         {
           "name": "1x",
-          "value": 1
+          "value": "1"
         }
       ]
     }
@@ -44,6 +44,6 @@
   "platforms": [
     "web"
   ],
-  "moduleURL": "./main.757fee26.js",
+  "moduleURL": "./main.06cc4e49.js",
   "readmeURL": "./README.md"
 }

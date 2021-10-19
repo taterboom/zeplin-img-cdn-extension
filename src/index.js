@@ -6,7 +6,7 @@
 function layer(context, selectedLayer) {
   const { sourceId, version, assets } = selectedLayer
   const ext = context.getOption("ext")
-  const scale = context.getOption("scale")
+  const scale = parseInt(context.getOption("scale"))
   if (assets && version.assets) {
     const layerAssetsInfo = version.assets.find((item) => item.layerId === sourceId)
     if (layerAssetsInfo && layerAssetsInfo.contents) {
