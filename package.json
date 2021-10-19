@@ -15,6 +15,44 @@
     "displayName": "Media Url",
     "platforms": [
       "web"
+    ],
+    "options": [
+      {
+        "id": "ext",
+        "name": "png or jpg",
+        "type": "picker",
+        "default": "png",
+        "options": [
+          {
+            "name": "png",
+            "value": "png"
+          },
+          {
+            "name": "jpg",
+            "value": "jpg"
+          }
+        ]
+      },
+      {
+        "id": "scale",
+        "name": "@x",
+        "type": "picker",
+        "default": 3,
+        "options": [
+          {
+            "name": "3x",
+            "value": 3
+          },
+          {
+            "name": "2x",
+            "value": 2
+          },
+          {
+            "name": "1x",
+            "value": 1
+          }
+        ]
+      }
     ]
   },
   "dependencies": {

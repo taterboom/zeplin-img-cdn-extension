@@ -5,10 +5,14 @@
 
 function layer(context, selectedLayer) {
   const { sourceId, version, assets } = selectedLayer
+  const ext = context.getOption("ext")
+  const scale = context.getOption("scale")
   if (assets && version.assets) {
     const layerAssetsInfo = version.assets.find((item) => item.layerId === sourceId)
     if (layerAssetsInfo && layerAssetsInfo.contents) {
-      const asset = layerAssetsInfo.contents.find((item) => item.densityScale === 3)
+      const asset = layerAssetsInfo.contents.find((item) => {
+        return item.densityScale === scale && item.format === ext
+      })
       if (asset) {
         return asset.url
       }
@@ -16,13 +20,9 @@ function layer(context, selectedLayer) {
   }
 }
 
-function screen(context, selectedVersion, selectedScreen) {
-  console.log("s", context, selectedVersion, selectedScreen)
-}
+function screen(context, selectedVersion, selectedScreen) {}
 
-function component(context, selectedVersion, selectedComponent) {
-  console.log("c", context, selectedVersion, selectedComponent)
-}
+function component(context, selectedVersion, selectedComponent) {}
 
 function colors(context) {}
 
