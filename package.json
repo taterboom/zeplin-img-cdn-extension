@@ -52,6 +52,12 @@
             "value": "1"
           }
         ]
+      },
+      {
+        "id": "optimize",
+        "name": "use optimized img (fallback to raw url when optimized url does not exist)",
+        "type": "switch",
+        "default": true
       }
     ]
   },

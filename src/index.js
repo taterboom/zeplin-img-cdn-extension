@@ -6,6 +6,7 @@
 function layer(context, selectedLayer) {
   const { sourceId, version, assets } = selectedLayer
   const ext = context.getOption("ext")
+  const useOptimized = context.getOption("optimize")
   const scale = parseInt(context.getOption("scale"))
   if (assets && version.assets) {
     const layerAssetsInfo = version.assets.find((item) => item.layerId === sourceId)
@@ -13,7 +14,11 @@ function layer(context, selectedLayer) {
       const asset = layerAssetsInfo.contents.find((item) => {
         return item.densityScale === scale && item.format === ext
       })
-      if (asset) {
+      if (!asset) return ""
+      if (useOptimized && asset.optimized && asset.optimized.url) {
+        return asset.optimized.url
+      }
+      if (asset.url) {
         return asset.url
       }
     }
