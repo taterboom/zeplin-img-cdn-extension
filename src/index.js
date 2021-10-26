@@ -14,12 +14,32 @@ function layer(context, selectedLayer) {
       const asset = layerAssetsInfo.contents.find((item) => {
         return item.densityScale === scale && item.format === ext
       })
-      if (!asset) return ""
-      if (useOptimized && asset.optimized && asset.optimized.url) {
-        return asset.optimized.url
+      let originalUrl
+      let optimizedUrl
+      /**
+       * 实际发现客户端和网页版存在两种数据结构:
+       * web: {url, format, densityScale, optimized: { url, format, densityScale, originalURL, status }}
+       * client: {url, format, densityScale} | {url, format, densityScale, originalURL, status}
+       * 看出来网页版的数据结构中 原始图片和压缩图片的数据是在一个对象中
+       * 客户端的数据结构将两者摊平
+       */
+      for (let i = 0; i < layerAssetsInfo.contents.length; i++) {
+        const item = layerAssetsInfo.contents[i]
+        if (item.densityScale === scale && item.format === ext) {
+          if (typeof item.optimized === "object") {
+            originalUrl = item.url
+            optimizedUrl = item.optimized.url
+          } else if (item.originalURL !== undefined) {
+            originalUrl = item.originalURL
+            optimizedUrl = item.url
+          }
+        }
       }
-      if (asset.url) {
-        return asset.url
+      if (useOptimized && optimizedUrl) {
+        return optimizedUrl
+      }
+      if (originalUrl) {
+        return originalUrl
       }
     }
   }

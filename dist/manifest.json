@@ -2,7 +2,7 @@
   "packageName": "img-url",
   "name": "Img Url",
   "description": "",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "options": [
     {
       "id": "ext",
@@ -50,6 +50,6 @@
   "platforms": [
     "web"
   ],
-  "moduleURL": "./main.358c137c.js",
+  "moduleURL": "./main.a87a3c75.js",
   "readmeURL": "./README.md"
 }
