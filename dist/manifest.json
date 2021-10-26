@@ -2,7 +2,7 @@
   "packageName": "img-url",
   "name": "Img Url",
   "description": "",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "options": [
     {
       "id": "ext",
@@ -39,11 +39,17 @@
           "value": "1"
         }
       ]
+    },
+    {
+      "id": "optimize",
+      "name": "use optimized img (fallback to raw url when optimized url does not exist)",
+      "type": "switch",
+      "default": true
     }
   ],
   "platforms": [
     "web"
   ],
-  "moduleURL": "./main.06cc4e49.js",
+  "moduleURL": "./main.358c137c.js",
   "readmeURL": "./README.md"
 }
